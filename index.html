@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Saysko In The Mix — DJ &amp; Sound System</title>
-<meta name="description" content="Saysko In The Mix — DJ, mix, boucles et sound design.">
+<meta name="description" content="Saysko In The Mix — DJ hip-hop, house et dérivés. Mix, boucles et sound design.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -20,17 +20,16 @@ a{color:inherit;text-decoration:none}
 header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,5,8,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
 .logo{font-family:"Anton",sans-serif;font-size:1.35rem;letter-spacing:1px;text-transform:uppercase}
-.logo b{color:var(--cyan)}
-.logo i{color:var(--magenta);font-style:normal}
-nav a{font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-left:22px;transition:color .2s,text-shadow .2s}
+.logo b{color:var(--cyan)}.logo i{color:var(--magenta);font-style:normal}
+nav a{font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-left:20px;transition:color .2s,text-shadow .2s}
 nav a:hover,nav a.active{color:var(--cyan);text-shadow:0 0 12px rgba(0,240,255,.6)}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:100px 22px 70px;position:relative;overflow:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:100px 22px 70px}
 .badge{font-family:"Space Mono",monospace;font-size:.65rem;letter-spacing:4px;color:var(--cyan);text-transform:uppercase;margin-bottom:18px}
 .badge::before{content:"● ";color:var(--magenta);animation:blink 1.4s steps(2) infinite}
 @keyframes blink{50%{opacity:.2}}
 h1{font-family:"Anton",sans-serif;font-size:clamp(3.4rem,12vw,9rem);line-height:.86;letter-spacing:1px;text-transform:uppercase;text-shadow:3px 3px 0 rgba(255,43,214,.35),-3px -3px 0 rgba(0,240,255,.3)}
 h1 .l2{display:block;color:var(--cyan);font-size:.6em;letter-spacing:8px;margin-top:8px;text-shadow:0 0 30px rgba(0,240,255,.4)}
-.sub{font-family:"Space Mono",monospace;color:var(--muted);max-width:600px;margin:28px 0 32px;font-size:.8rem;line-height:1.8}
+.sub{font-family:"Space Mono",monospace;color:var(--muted);max-width:620px;margin:28px 0 32px;font-size:.8rem;line-height:1.8}
 .btn{display:inline-block;font-family:"Space Mono",monospace;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;padding:14px 26px;border:1px solid var(--cyan);color:var(--cyan);background:rgba(0,240,255,.06);transition:all .25s}
 .btn:hover{background:var(--cyan);color:#050508;box-shadow:0 0 28px rgba(0,240,255,.5)}
 .btn.alt{border-color:var(--magenta);color:var(--magenta);background:rgba(255,43,214,.06);margin-left:12px}
@@ -42,7 +41,7 @@ section{padding:86px 0;border-bottom:1px solid var(--line)}
 .tag{font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:3px;color:var(--magenta);text-transform:uppercase;margin-bottom:10px}
 h2{font-family:"Anton",sans-serif;font-size:clamp(2.2rem,5vw,4rem);text-transform:uppercase;letter-spacing:1px;line-height:1;margin-bottom:16px}
 h2 em{color:var(--cyan);font-style:normal}
-.lead{font-family:"Space Mono",monospace;color:var(--muted);font-size:.78rem;max-width:620px;margin-bottom:38px;line-height:1.8}
+.lead{font-family:"Space Mono",monospace;color:var(--muted);font-size:.78rem;max-width:640px;margin-bottom:38px;line-height:1.8}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
 .card{position:relative;background:linear-gradient(160deg,rgba(0,240,255,.05),transparent 60%),var(--panel);border:1px solid var(--line);padding:30px 24px;min-height:170px;overflow:hidden;transition:transform .25s,border-color .25s}
 .card:hover{transform:translateY(-6px);border-color:var(--cyan)}
@@ -51,6 +50,10 @@ h2 em{color:var(--cyan);font-style:normal}
 .card .num{font-family:"Space Mono",monospace;font-size:.6rem;color:var(--magenta);letter-spacing:2px}
 .card h3{font-family:"Anton",sans-serif;font-size:1.5rem;text-transform:uppercase;margin:10px 0;font-weight:400}
 .card p{font-family:"Space Mono",monospace;font-size:.72rem;color:var(--muted);line-height:1.7}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.chip{font-family:"Space Mono",monospace;font-size:.6rem;letter-spacing:1px;text-transform:uppercase;padding:5px 9px;border:1px solid rgba(255,43,214,.35);color:var(--magenta)}
+.chip.house{border-color:rgba(0,240,255,.35);color:var(--cyan)}
+.chip.hip{border-color:rgba(224,189,133,.35);color:#e0bd85}
 .eq{display:flex;gap:4px;align-items:flex-end;height:34px;margin-top:18px}
 .eq i{display:block;width:5px;background:linear-gradient(var(--cyan),var(--magenta));animation:eq 1s ease-in-out infinite alternate}
 .eq i:nth-child(1){height:30%;animation-delay:.1s}.eq i:nth-child(2){height:80%;animation-delay:.3s}.eq i:nth-child(3){height:45%;animation-delay:.5s}.eq i:nth-child(4){height:95%;animation-delay:.2s}.eq i:nth-child(5){height:60%;animation-delay:.6s}.eq i:nth-child(6){height:35%;animation-delay:.4s}
@@ -61,20 +64,33 @@ footer b{color:var(--cyan)}
 </style>
 </head>
 <body>
-<header><div class="container nav"><a class="logo" href="index.html">SAYSKO <b>IN</b> <i>THE</i> MIX</a><nav><a class="active" href="#accueil">Accueil</a><a href="#mix">Mix</a><a href="#son">Sound</a><a href="#contact">Contact</a></nav></div></header>
+<header><div class="container nav"><a class="logo" href="index.html">SAYSKO <b>IN</b> <i>THE</i> MIX</a><nav><a class="active" href="#accueil">Accueil</a><a href="#styles">Styles</a><a href="#mix">Mix</a><a href="#son">Sound</a><a href="#contact">Contact</a></nav></div></header>
 
 <section class="hero" id="accueil"><div class="container">
-  <div class="badge">DJ · Sound system · En direct</div>
+  <div class="badge">DJ · Hip-hop · House · Sound system</div>
   <h1>SAYSKO<span class="l2">IN THE MIX</span></h1>
-  <p class="sub">Le son prend le relais de l'image. Boucles, transitions, ambiances et sets — un espace neuf, dédié au mix.</p>
-  <a class="btn" href="#mix">Entrer dans le mix</a><a class="btn alt" href="#son">Sound design</a>
+  <p class="sub">Hip-hop, house et tous leurs dérivés. Le son prend le relais de l'image : boucles, transitions, ambiances et sets.</p>
+  <a class="btn" href="#styles">Mes styles</a><a class="btn alt" href="#son">Sound design</a>
 </div></section>
 
-<div class="marquee"><span>PLAY · MIX · LOOP · TRANSITION · SOUND DESIGN · PLAY · MIX · LOOP · TRANSITION · SOUND DESIGN ·&nbsp;</span><span>PLAY · MIX · LOOP · TRANSITION · SOUND DESIGN · PLAY · MIX · LOOP · TRANSITION · SOUND DESIGN ·&nbsp;</span></div>
+<div class="marquee"><span>HIP-HOP · BOOM BAP · LO-FI · TRAP · HOUSE · DEEP HOUSE · FRENCH HOUSE · AFRO HOUSE · HIP-HOP · BOOM BAP · LO-FI ·&nbsp;</span><span>HIP-HOP · BOOM BAP · LO-FI · TRAP · HOUSE · DEEP HOUSE · FRENCH HOUSE · AFRO HOUSE · HIP-HOP · BOOM BAP · LO-FI ·&nbsp;</span></div>
+
+<section id="styles"><div class="container">
+  <div class="tag">01 / Les styles</div><h2>Hip-hop <em>&amp;</em> house</h2>
+  <p class="lead">Deux racines, beaucoup de dérivés. Je mix du hip-hop au house et je navigue entre leurs sous-genres selon l'énergie du moment.</p>
+  <div class="grid">
+    <div class="card"><div class="num">01</div><h3>Hip-hop</h3><p>La base : boom bap, samples, grooves et flow.</p>
+      <div class="chips"><span class="chip hip">Boom bap</span><span class="chip hip">Lo-fi</span><span class="chip hip">Trap</span><span class="chip hip">Old school</span></div></div>
+    <div class="card"><div class="num">02</div><h3>House</h3><p>Le beat 4/4, la profondeur et l'énergie de la piste.</p>
+      <div class="chips"><span class="chip house">Deep house</span><span class="chip house">French house</span><span class="chip house">Afro house</span><span class="chip house">Tech house</span></div></div>
+    <div class="card"><div class="num">03</div><h3>Dérivés</h3><p>Les croisements et les textures entre les deux univers.</p>
+      <div class="chips"><span class="chip">Hip-house</span><span class="chip house">Nu disco</span><span class="chip hip">Jazz rap</span><span class="chip">Bass house</span></div></div>
+  </div>
+</div></section>
 
 <section id="mix"><div class="container">
-  <div class="tag">01 / Le mix</div><h2>Le <em>mix</em></h2>
-  <p class="lead">L'univers DJ : sets, transitions et énergie. Chaque thème a son espace, rien n'est mélangé.</p>
+  <div class="tag">02 / Le mix</div><h2>Le <em>mix</em></h2>
+  <p class="lead">Sets, transitions et énergie. Chaque thème a son espace, rien n'est mélangé.</p>
   <div class="grid">
     <div class="card"><div class="num">01</div><h3>Lives &amp; sets</h3><p>Les enregistrements et les moments forts du mix.</p><div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
     <div class="card"><div class="num">02</div><h3>Boucles</h3><p>Les loops et transitions générées par le bot Saysko In The Mix.</p><div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
@@ -83,7 +99,7 @@ footer b{color:var(--cyan)}
 </div></section>
 
 <section id="son"><div class="container">
-  <div class="tag">02 / Le sound</div><h2>Le <em>sound</em></h2>
+  <div class="tag">03 / Le sound</div><h2>Le <em>sound</em></h2>
   <p class="lead">Ambiances, identité sonore et sound design — générés par le bot Saysko In The Mix.</p>
   <div class="grid">
     <div class="card"><div class="num">01</div><h3>Ambiances</h3><p>Textures sonores pour les lives et les vidéos.</p></div>
@@ -93,11 +109,11 @@ footer b{color:var(--cyan)}
 </div></section>
 
 <section id="contact"><div class="container">
-  <div class="tag">03 / Contact</div><h2>On <em>parle</em> son ?</h2>
+  <div class="tag">04 / Contact</div><h2>On <em>parle</em> son ?</h2>
   <p class="lead">Pour un mix, un projet sonore ou une collaboration.</p>
   <a class="btn" href="mailto:sayskothemix@gmail.com">sayskothemix@gmail.com</a>
 </div></section>
 
-<footer>SAYSKO IN THE MIX — <b>Le son est une image qu'on entend.</b> · © 2026</footer>
+<footer>SAYSKO IN THE MIX — <b>Hip-hop · House · &amp; tout le reste.</b> · © 2026</footer>
 </body>
 </html>
