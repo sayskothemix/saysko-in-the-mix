@@ -3,78 +3,101 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saysko In The Mix — DJ &amp; Sound Design</title>
-<meta name="description" content="Saysko In The Mix —DJ, musique, boucles et sound design.">
+<title>Saysko In The Mix — DJ &amp; Sound System</title>
+<meta name="description" content="Saysko In The Mix — DJ, mix, boucles et sound design.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#08070a;--surface:#121016;--text:#f2ecdf;--muted:#a89e8f;--accent:#e0bd85;--accent2:#c8963e}
+:root{--bg:#050508;--panel:#0d0c14;--line:rgba(0,240,255,.18);--cyan:#00f0ff;--magenta:#ff2bd6;--text:#f4f4f8;--muted:#8a8aa0}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
-body{background:radial-gradient(circle at 50% -10%,#1b1720 0,var(--bg) 55%);color:var(--text);font-family:Montserrat,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:"Barlow Condensed",sans-serif;letter-spacing:.5px;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 15% 20%,rgba(0,240,255,.12),transparent 40%),radial-gradient(circle at 85% 70%,rgba(255,43,214,.12),transparent 45%)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(0,240,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,240,255,.035) 1px,transparent 1px);background-size:44px 44px}
 a{color:inherit;text-decoration:none}
-.container{max-width:1100px;margin:0 auto;padding:0 22px}
-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,7,10,.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(224,189,133,.12)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{font-family:"Cormorant Garamond",serif;font-size:1.15rem;letter-spacing:3px;text-transform:uppercase;color:var(--text)}
-.logo span{color:var(--accent)}
-nav a{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-left:26px;transition:color .25s}
-nav a:hover,nav a.active{color:var(--accent)}
-.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:100px 22px 60px}
-.kicker{font-size:.68rem;letter-spacing:5px;text-transform:uppercase;color:var(--accent);margin-bottom:22px}
-h1{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(2.6rem,7vw,5.5rem);line-height:1.05;letter-spacing:2px}
-h1 span{color:var(--accent);font-style:italic}
-.sub{color:var(--muted);max-width:620px;margin:24px auto 34px;font-size:.95rem}
-.btn{display:inline-block;border:1px solid var(--accent);background:linear-gradient(135deg,var(--accent),var(--accent2));color:#14100a;padding:14px 28px;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;font-weight:600}
-section{padding:90px 0;border-top:1px solid rgba(224,189,133,.1)}
-h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(2rem,4vw,3rem);margin-bottom:12px}
-h2 span{color:var(--accent);font-style:italic}
-.lead{color:var(--muted);max-width:680px;margin-bottom:40px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-.card{background:var(--surface);border:1px solid rgba(224,189,133,.16);padding:28px 24px;min-height:150px}
-.card h3{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:1.4rem;margin-bottom:8px;color:var(--accent)}
-.card p{font-size:.85rem;color:var(--muted)}
-footer{text-align:center;padding:50px 20px;color:var(--muted);border-top:1px solid rgba(224,189,133,.12);font-size:.7rem;letter-spacing:2px;text-transform:uppercase}
-@media(max-width:640px){nav a{display:none}.nav{justify-content:center}}
+.container{max-width:1180px;margin:0 auto;padding:0 22px}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,5,8,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:"Anton",sans-serif;font-size:1.35rem;letter-spacing:1px;text-transform:uppercase}
+.logo b{color:var(--cyan)}
+.logo i{color:var(--magenta);font-style:normal}
+nav a{font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-left:22px;transition:color .2s,text-shadow .2s}
+nav a:hover,nav a.active{color:var(--cyan);text-shadow:0 0 12px rgba(0,240,255,.6)}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:100px 22px 70px;position:relative;overflow:hidden}
+.badge{font-family:"Space Mono",monospace;font-size:.65rem;letter-spacing:4px;color:var(--cyan);text-transform:uppercase;margin-bottom:18px}
+.badge::before{content:"● ";color:var(--magenta);animation:blink 1.4s steps(2) infinite}
+@keyframes blink{50%{opacity:.2}}
+h1{font-family:"Anton",sans-serif;font-size:clamp(3.4rem,12vw,9rem);line-height:.86;letter-spacing:1px;text-transform:uppercase;text-shadow:3px 3px 0 rgba(255,43,214,.35),-3px -3px 0 rgba(0,240,255,.3)}
+h1 .l2{display:block;color:var(--cyan);font-size:.6em;letter-spacing:8px;margin-top:8px;text-shadow:0 0 30px rgba(0,240,255,.4)}
+.sub{font-family:"Space Mono",monospace;color:var(--muted);max-width:600px;margin:28px 0 32px;font-size:.8rem;line-height:1.8}
+.btn{display:inline-block;font-family:"Space Mono",monospace;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;padding:14px 26px;border:1px solid var(--cyan);color:var(--cyan);background:rgba(0,240,255,.06);transition:all .25s}
+.btn:hover{background:var(--cyan);color:#050508;box-shadow:0 0 28px rgba(0,240,255,.5)}
+.btn.alt{border-color:var(--magenta);color:var(--magenta);background:rgba(255,43,214,.06);margin-left:12px}
+.btn.alt:hover{background:var(--magenta);color:#050508;box-shadow:0 0 28px rgba(255,43,214,.5)}
+.marquee{overflow:hidden;white-space:nowrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(0,240,255,.03);padding:10px 0}
+.marquee span{font-family:"Anton",sans-serif;font-size:1.1rem;letter-spacing:5px;color:rgba(244,244,248,.35);animation:scroll 22s linear infinite}
+@keyframes scroll{to{transform:translateX(-50%)}}
+section{padding:86px 0;border-bottom:1px solid var(--line)}
+.tag{font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:3px;color:var(--magenta);text-transform:uppercase;margin-bottom:10px}
+h2{font-family:"Anton",sans-serif;font-size:clamp(2.2rem,5vw,4rem);text-transform:uppercase;letter-spacing:1px;line-height:1;margin-bottom:16px}
+h2 em{color:var(--cyan);font-style:normal}
+.lead{font-family:"Space Mono",monospace;color:var(--muted);font-size:.78rem;max-width:620px;margin-bottom:38px;line-height:1.8}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.card{position:relative;background:linear-gradient(160deg,rgba(0,240,255,.05),transparent 60%),var(--panel);border:1px solid var(--line);padding:30px 24px;min-height:170px;overflow:hidden;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--cyan)}
+.card::after{content:"";position:absolute;top:0;left:0;width:0;height:3px;background:var(--cyan);transition:width .35s}
+.card:hover::after{width:100%}
+.card .num{font-family:"Space Mono",monospace;font-size:.6rem;color:var(--magenta);letter-spacing:2px}
+.card h3{font-family:"Anton",sans-serif;font-size:1.5rem;text-transform:uppercase;margin:10px 0;font-weight:400}
+.card p{font-family:"Space Mono",monospace;font-size:.72rem;color:var(--muted);line-height:1.7}
+.eq{display:flex;gap:4px;align-items:flex-end;height:34px;margin-top:18px}
+.eq i{display:block;width:5px;background:linear-gradient(var(--cyan),var(--magenta));animation:eq 1s ease-in-out infinite alternate}
+.eq i:nth-child(1){height:30%;animation-delay:.1s}.eq i:nth-child(2){height:80%;animation-delay:.3s}.eq i:nth-child(3){height:45%;animation-delay:.5s}.eq i:nth-child(4){height:95%;animation-delay:.2s}.eq i:nth-child(5){height:60%;animation-delay:.6s}.eq i:nth-child(6){height:35%;animation-delay:.4s}
+@keyframes eq{to{height:15%}}
+footer{text-align:center;padding:44px 20px;font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+footer b{color:var(--cyan)}
+@media(max-width:640px){nav a{display:none}.nav{justify-content:center}.btn.alt{margin-left:0;margin-top:10px}}
 </style>
 </head>
 <body>
-<header><div class="container nav"><a class="logo" href="index.html">SAYSKO <span>IN THE MIX</span></a><nav><a class="active" href="#accueil">Accueil</a><a href="#mix">Mix</a><a href="#son">Sound</a><a href="#contact">Contact</a></nav></div></header>
+<header><div class="container nav"><a class="logo" href="index.html">SAYSKO <b>IN</b> <i>THE</i> MIX</a><nav><a class="active" href="#accueil">Accueil</a><a href="#mix">Mix</a><a href="#son">Sound</a><a href="#contact">Contact</a></nav></div></header>
 
-<section class="hero" id="accueil">
-  <div><div class="kicker">DJ · Musique · Sound Design</div>
-  <h1>SAYSKO <span>IN THE MIX</span></h1>
-  <p class="sub">Un nouvel espace dédié au mix, aux boucles et au sound design. Site neuf, base neuve — sans rien mélanger avec la photographie.</p>
-  <a class="btn" href="#mix">Entrer dans le mix</a></div>
-</section>
+<section class="hero" id="accueil"><div class="container">
+  <div class="badge">DJ · Sound system · En direct</div>
+  <h1>SAYSKO<span class="l2">IN THE MIX</span></h1>
+  <p class="sub">Le son prend le relais de l'image. Boucles, transitions, ambiances et sets — un espace neuf, dédié au mix.</p>
+  <a class="btn" href="#mix">Entrer dans le mix</a><a class="btn alt" href="#son">Sound design</a>
+</div></section>
+
+<div class="marquee"><span>PLAY · MIX · LOOP · TRANSITION · SOUND DESIGN · PLAY · MIX · LOOP · TRANSITION · SOUND DESIGN ·&nbsp;</span><span>PLAY · MIX · LOOP · TRANSITION · SOUND DESIGN · PLAY · MIX · LOOP · TRANSITION · SOUND DESIGN ·&nbsp;</span></div>
 
 <section id="mix"><div class="container">
-  <h2>Le <span>mix</span></h2>
-  <p class="lead">L'univers DJ : sets, transitions et énergie. Le contenu arrive ici, proprement rangé par thème.</p>
+  <div class="tag">01 / Le mix</div><h2>Le <em>mix</em></h2>
+  <p class="lead">L'univers DJ : sets, transitions et énergie. Chaque thème a son espace, rien n'est mélangé.</p>
   <div class="grid">
-    <div class="card"><h3>Lives &amp; sets</h3><p>Les enregistrements et les moments forts du mix.</p></div>
-    <div class="card"><h3>Boucles</h3><p>Les loops et transitions du bot Saysko In The Mix.</p></div>
-    <div class="card"><h3>Matériel</h3><p>DJUCED, Inpulse 500 et le setup de studio.</p></div>
+    <div class="card"><div class="num">01</div><h3>Lives &amp; sets</h3><p>Les enregistrements et les moments forts du mix.</p><div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+    <div class="card"><div class="num">02</div><h3>Boucles</h3><p>Les loops et transitions générées par le bot Saysko In The Mix.</p><div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+    <div class="card"><div class="num">03</div><h3>Matériel</h3><p>DJUCED, Inpulse 500 et le setup du studio.</p><div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
   </div>
 </div></section>
 
 <section id="son"><div class="container">
-  <h2>Le <span>sound</span></h2>
-  <p class="lead">Ambiances, identité sonore et sound design — générés par le bot Saysko In The Mix, rangés dans son dossier dédié sur le Mac.</p>
+  <div class="tag">02 / Le sound</div><h2>Le <em>sound</em></h2>
+  <p class="lead">Ambiances, identité sonore et sound design — générés par le bot Saysko In The Mix.</p>
   <div class="grid">
-    <div class="card"><h3>Ambiances</h3><p>Textures sonores pour les lives et les vidéos.</p></div>
-    <div class="card"><h3>Transitions</h3><p>Eléments de liaison entre les morceaux.</p></div>
-    <div class="card"><h3>Musiques</h3><p>Compositions originales, boucles et identités.</p></div>
+    <div class="card"><div class="num">01</div><h3>Ambiances</h3><p>Textures sonores pour les lives et les vidéos.</p></div>
+    <div class="card"><div class="num">02</div><h3>Transitions</h3><p>Éléments de liaison entre les morceaux.</p></div>
+    <div class="card"><div class="num">03</div><h3>Musiques</h3><p>Compositions originales, boucles et identités.</p></div>
   </div>
 </div></section>
 
 <section id="contact"><div class="container">
-  <h2>Contact</h2>
-  <p class="lead">Pour une demande de mix, un projet sonore ou une collaboration, écris-moi.</p>
-  <a class="btn" href="mailto:sayskothemix+contact@gmail.com">Écrire à Saysko</a>
+  <div class="tag">03 / Contact</div><h2>On <em>parle</em> son ?</h2>
+  <p class="lead">Pour un mix, un projet sonore ou une collaboration.</p>
+  <a class="btn" href="mailto:sayskothemix@gmail.com">sayskothemix@gmail.com</a>
 </div></section>
 
-<footer>SAYSKO IN THE MIX — Le son est une image qu'on entend. · © 2026</footer>
+<footer>SAYSKO IN THE MIX — <b>Le son est une image qu'on entend.</b> · © 2026</footer>
 </body>
 </html>
